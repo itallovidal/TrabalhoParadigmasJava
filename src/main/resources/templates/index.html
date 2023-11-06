@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Index</title>
+</head>
+<body>
+    <section id="container">
+        <div id="container-tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Hobbie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <th:block th:each="cadastro : ${cadastros}">
+                        <tr>
+                            <td th:text="${cadastro.name()}"></td>
+                            <td th:text="${cadastro.hobbie()}"></td>
+                        </tr>
+                    </th:block>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div id="container-form">
+            <form action="/" method="POST">
+                <h1>Cadastrar ou Alterar</h1>
+                <p>Cadastre-se adicionando um hobbie relacionado à você, ou altere seu hobbie já
+                    cadastrado.</p>
+
+                <div class="container-input">
+                    <label for="name">Nome</label>
+                    <input name="name" id="name"/>
+                </div>
+
+                <div class="container-input">
+                    <label for="password">Senha</label>
+                    <input name="password" id="password"/>
+                </div>
+
+                <div class="container-input">
+                    <label for="hobbie">Hobbie</label>
+                    <input name="hobbie" id="hobbie"/>
+                </div>
+
+                <button>Tudo certo!</button>
+            </form>
+
+            <div id="container-sobre">
+                <h2>Paradigmas de Programação</h2>
+                <h3>Professor Denis Cople</h3>
+
+                <p id="sobre">Intuito do trabalho é fazer um sistema de cadastro em JAVA, Python e C++
+                    para que tenhamos contato com os diferentes paradigmas de programação.
+                    Esta aplicação está feita em <b>JAVA</b>.
+                </p>
+
+                <div id="integrantes">
+                    <p>Itallo Vidal | Guilherme Gino | João Fernandes  </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
