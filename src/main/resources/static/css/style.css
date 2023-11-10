@@ -93,6 +93,22 @@ body{
     width: 70%;
 }
 
+#container-form #errorMessage{
+    margin-block: 16px;
+    color: red;
+    background: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+#container-form #successMessage{
+    margin-block: 16px;
+    background: var(--highlight-color);
+    color: var(--secondary);
+    padding: 12px;
+    border-radius: 5px;
+}
+
 #container-form form div{
     margin-bottom: 16px;
     flex: 1;
